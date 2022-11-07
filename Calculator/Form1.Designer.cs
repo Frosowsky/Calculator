@@ -77,17 +77,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(5, 10);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 10, 5, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(525, 57);
+            this.label1.Size = new System.Drawing.Size(521, 42);
             this.label1.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(3, 60);
+            this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 23);
+            this.textBox1.Size = new System.Drawing.Size(525, 64);
             this.textBox1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -291,6 +295,7 @@
             this.buttonPlusOrMinus.TabIndex = 10;
             this.buttonPlusOrMinus.Text = "+/-";
             this.buttonPlusOrMinus.UseVisualStyleBackColor = false;
+            this.buttonPlusOrMinus.Click += new System.EventHandler(this.buttonPlusOrMinus_Click);
             // 
             // buttonComma
             // 
@@ -304,6 +309,7 @@
             this.buttonComma.TabIndex = 11;
             this.buttonComma.Text = ",";
             this.buttonComma.UseVisualStyleBackColor = false;
+            this.buttonComma.Click += new System.EventHandler(this.buttonComma_Click);
             // 
             // buttonSum
             // 
@@ -387,6 +393,7 @@
             this.buttonBspc.TabIndex = 17;
             this.buttonBspc.Text = "Backspace";
             this.buttonBspc.UseVisualStyleBackColor = false;
+            this.buttonBspc.Click += new System.EventHandler(this.buttonBspc_Click);
             // 
             // buttonCE
             // 
@@ -400,6 +407,7 @@
             this.buttonCE.TabIndex = 18;
             this.buttonCE.Text = "CE";
             this.buttonCE.UseVisualStyleBackColor = false;
+            this.buttonCE.Click += new System.EventHandler(this.buttonCE_Click);
             // 
             // buttonC
             // 
@@ -413,6 +421,7 @@
             this.buttonC.TabIndex = 19;
             this.buttonC.Text = "C";
             this.buttonC.UseVisualStyleBackColor = false;
+            this.buttonC.Click += new System.EventHandler(this.buttonC_Click);
             // 
             // Form1
             // 
