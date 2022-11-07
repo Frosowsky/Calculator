@@ -317,6 +317,7 @@
             this.buttonSum.TabIndex = 12;
             this.buttonSum.Text = "=";
             this.buttonSum.UseVisualStyleBackColor = false;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
             // 
             // buttonAdd
             // 
@@ -330,6 +331,7 @@
             this.buttonAdd.TabIndex = 13;
             this.buttonAdd.Text = "+";
             this.buttonAdd.UseVisualStyleBackColor = false;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // buttonSubstr
             // 
@@ -343,6 +345,7 @@
             this.buttonSubstr.TabIndex = 14;
             this.buttonSubstr.Text = "-";
             this.buttonSubstr.UseVisualStyleBackColor = false;
+            this.buttonSubstr.Click += new System.EventHandler(this.buttonSubstr_Click);
             // 
             // buttonMulti
             // 
@@ -356,6 +359,7 @@
             this.buttonMulti.TabIndex = 15;
             this.buttonMulti.Text = "*";
             this.buttonMulti.UseVisualStyleBackColor = false;
+            this.buttonMulti.Click += new System.EventHandler(this.buttonMulti_Click);
             // 
             // buttonDiv
             // 
@@ -369,6 +373,7 @@
             this.buttonDiv.TabIndex = 16;
             this.buttonDiv.Text = "/";
             this.buttonDiv.UseVisualStyleBackColor = false;
+            this.buttonDiv.Click += new System.EventHandler(this.buttonDiv_Click);
             // 
             // buttonBspc
             // 
