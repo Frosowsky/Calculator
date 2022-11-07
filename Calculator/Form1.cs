@@ -1,3 +1,5 @@
+using Microsoft.VisualBasic.Devices;
+
 namespace Calculator
 {
     public partial class Form1 : Form
@@ -99,17 +101,20 @@ namespace Calculator
         private void buttonSum_Click(object sender, EventArgs e)
         {
             num2 = Convert.ToDouble(textBox1.Text);
-            label1.Text = String.Empty;
+            label1.Text += num2;
             switch (sign)
             {
                 case "+":
                     textBox1.Text = Convert.ToString(num1 + num2);
+                   
                     break;
                 case "-":
                     textBox1.Text = Convert.ToString(num1 - num2);
+                    
                     break;
                 case "*":
                     textBox1.Text = Convert.ToString(num1 * num2);
+                    
                     break;
                 case "/":
                     if (num2 == 0)
@@ -119,10 +124,12 @@ namespace Calculator
                     else 
                     {
                         textBox1.Text = Convert.ToString(num1 / num2);                      
-                    } 
+                    }
+                   
                     break;
             }
             sign = String.Empty;
+            label1.Text = String.Empty;
             startNewNumber = true;
         }
 
@@ -134,5 +141,45 @@ namespace Calculator
             this.sign = sign;
             startNewNumber = true;
         }
-    }
+
+        private void buttonC_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+            label1.Text = String.Empty;
+            sign = String.Empty;
+            startNewNumber = true;
+        }
+
+        private void buttonCE_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "0";
+            startNewNumber = true;  
+        }
+
+        private void buttonBspc_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text.Length == 1)
+            {
+                textBox1.Text = "0";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text.Remove(textBox1.Text.Length - 1);
+            }
+        }
+
+        private void buttonPlusOrMinus_Click(object sender, EventArgs e)
+        {
+                textBox1.Text = Convert.ToString(Convert.ToDouble(textBox1.Text) * -1);
+        }
+
+        private void buttonComma_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text.IndexOf(',') == -1)
+            {
+                textBox1.Text += ",";
+                startNewNumber = false;
+            }
+        }
+    }  
 }
